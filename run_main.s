@@ -36,9 +36,6 @@ run_main:
             leaq    1(%rsp), %rsi
             xorq    %rax, %rax
             call    scanf
-            # save '\0' in memory
-            leaq    1(%rsp,%r10,1), %r11
-            movb    $0, (%r11)
             # save pointer to pstring 1
             movq    %rsp, %r14
 
@@ -59,9 +56,6 @@ run_main:
             leaq    1(%rsp), %rsi
             xorq    %rax, %rax
             call    scanf
-            # save '\0' in memory
-            leaq    1(%rsp,%r10,1), %r11
-            movb    $0, (%r11)
             # save pointer to pstring 2
             movq    %rsp, %r15
 
